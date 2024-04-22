@@ -22,7 +22,7 @@ max_tokens = 200#st.sidebar.slider("Max Tokens", min_value = 50, max_value = 500
 
 client = OpenAI()
 
-st.title("SpotOn: Spencer Testing Site")
+st.title("Reposite: PlanPilot")
 
 if st.button("Start/Restart"):
     #clear all session state
@@ -44,7 +44,7 @@ if "messages" in st.session_state:
         initialize_prompt_and_text(st.session_state)
 
     if "openai_model" not in st.session_state:
-        st.session_state["openai_model"] = "gpt-4-1106-preview"
+        st.session_state["openai_model"] = "gpt-4-turbo"
 
     for message in st.session_state.messages:
         with st.chat_message(message["role"]):
